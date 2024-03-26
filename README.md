@@ -21,7 +21,7 @@ Activate the conda environment and install HMMER and the modified version of Alp
 source activate DeepAF
 conda install -c bioconda hmmer
 
-python3 -m pip install git+git://github.com/anjali-nelliat/AlphaPulldown.git@main
+python3 -m pip install -e git+https://github.com/anjali-nelliat/AlphaPulldown.git@main
 pip install jax==0.4.23 jaxlib==0.4.23+cuda11.cudnn86 -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
 
 python3 -m pip install git+git://github.com/anjali-nelliat/DeepAF.git@main
