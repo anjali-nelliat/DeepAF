@@ -4,7 +4,7 @@ DeepAF is a Python package that improves the accuracy of high-throughput AlphaFo
 The pipeline consists of four major steps:
 1. Obtain predicted protein complexes using an optimized version of [AlphaPulldown](https://github.com/KosinskiLab/AlphaPulldown/tree/main).
 2. Calculate 3D representations of each protein complex using Euclidian distance-based encoding.
-3. Train the DenseNet3D model.
+3. Train the DenseNet3D model (implementation based on https://github.com/GalDude33/DenseNetFCN-3D).
 4. Run the query dataset.
 
 ## Pre-installation
