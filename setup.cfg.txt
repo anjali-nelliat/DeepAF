@@ -1,0 +1,34 @@
+[metadata]
+name = deep
+author = Anjali Nelliat
+author_email = anjali.nelliat@gmail.com
+description = Pipeline allows for PPI screening with AlphaPulldown and DenseNet
+url = https://github.com/anjali-nelliat/DeepAF
+long_description = file: README.md
+long_description_content_type = text/markdown
+classifiers =
+    Programming Language :: Python :: 3
+    License :: OSI Approved :: MIT License
+    Operating System :: OS Independent
+
+[options]
+packages=
+    deepaf
+
+package_dir =
+    deepaf = ./deepaf
+
+include_package_data = True
+
+python_requires = >=3.8
+install_requires = 
+    matplotlib>=3.3.3
+    numpy
+    pandas>=1.5.3
+    tensorflow>=2.14.0
+    importlib-resources>=6.1.0
+    biopython==1.81
+    tqdm>=4.66.1
+    scikit-learn>=1.1.1
+
+scripts = ./deepaf/create_tensors.py, ./deepaf/train_model.py, ./deepaf/query_model.py, ./deepaf/utils/dataset.py, ./deepaf/utils/distance_encoding.py, ./deepaf/utils/get_PDB.py, ./deepaf/utils/get_interface.py, ./deepaf/utils/densenet3D.py, ./deepaf/utils/densenet_model.py, ./deepaf/utils/data_augment.py, ./deepaf/utils/training_plots.py
