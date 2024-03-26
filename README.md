@@ -14,7 +14,7 @@ Download Alphafold databases as decribed in the [AlphaFold documentation](https:
 ### Create Anaconda environment
 Create an environment with required dependencies
 ```
-conda create -n DeepAF python==3.10 -c omnia -c bioconda -c conda-forge  openmm==8.0 pdbfixer==1.9 kalign2 cctbx-base pytest importlib_metadata hhsuite
+conda create -n DeepAF -c omnia -c bioconda -c conda-forge python==3.10 openmm==8.0 pdbfixer==1.9 kalign2 cctbx-base pytest importlib_metadata hhsuite
 ```
 Activate the conda environment and install HMMER and the modified version of AlphaPulldown with parallel MSA execution enabled.
 ```
