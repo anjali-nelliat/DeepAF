@@ -19,7 +19,6 @@ conda create -n DeepAF -c omnia -c bioconda -c conda-forge python==3.10 openmm==
 Activate the conda environment and install HMMER and the modified version of AlphaPulldown with parallel MSA execution enabled.
 ```
 source activate DeepAF
-conda install tensorflow==2.9.1 scikit-learn==1.1.1 numpy pandas matplotlib
 conda install -c bioconda hmmer
 
 python3 -m pip install git+git://github.com/anjali-nelliat/AlphaPulldown.git@main
