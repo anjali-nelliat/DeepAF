@@ -45,7 +45,7 @@ create_individual_features.py \
 ```
 
 ### Step 2: Predict complex structures
-The pickle files generated in Step 1 are supplied as monomer objects for structure prediction on GPU. Thee ```--mode``` option indicates the nature of interactions as described in the [AlphaPulldown documentation](https://github.com/KosinskiLab/AlphaPulldown/tree/main)
+The pickle files generated in Step 1 are supplied as monomer objects for structure prediction on GPU. The ```--mode``` option indicates the nature of interactions as described in the [AlphaPulldown documentation](https://github.com/KosinskiLab/AlphaPulldown/tree/main)
 ```
 run_multimer_jobs.py --mode=pulldown \
 --num_cycle=3 \
