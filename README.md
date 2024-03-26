@@ -1,5 +1,5 @@
 # DeepAF
-DeepAF is a Python package that improves the accuracy of high-throughput AlphaFold-Multimer screens using the 3D structural information learned by a DNN to identify real protein complexes. 
+DeepAF is a Python package that improves the accuracy of high-throughput AlphaFold-Multimer screens using the 3D structural information learned by a  Dense Convolutional Network (DenseNet) to identify real protein complexes. 
 
 The pipeline consists of four major steps:
 1. Obtain predicted protein complexes using an optimized version of [AlphaPulldown](https://github.com/KosinskiLab/AlphaPulldown/tree/main).
