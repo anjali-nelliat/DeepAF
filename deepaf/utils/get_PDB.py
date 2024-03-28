@@ -4,7 +4,6 @@
 
 import numpy as np
 import pandas as pd
-import json
 
 PDBFS = {
     'ATOM': [0, 4],
