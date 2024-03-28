@@ -10,7 +10,7 @@ import os
 
 from tqdm import tqdm
 from math import ceil, floor, sqrt
-from .getPDB import readPDB, readPDB2Pd
+from deepaf.utils.get_PDB import readPDB, readPDB2Pd
 
 
 def resize_data(xyz, content, edge_length, relaxed=True):
