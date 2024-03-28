@@ -12,9 +12,9 @@ import numpy as np
 import tensorflow as tf
 from tensorflow import keras
 
-from utils.densenet_model import get_model
-from utils.dataset import gen, get_dataset_from_csv
-from utils.training_plots import saveConfig, drawFig
+from deepaf.utils.densenet_model import get_model
+from deepaf.utils.dataset import gen, get_dataset_from_csv
+from deepaf.utils.training_plots import saveConfig, drawFig
 
 
 print(tf.test.gpu_device_name())
