@@ -8,7 +8,7 @@ from tqdm import tqdm
 import numpy as np
 from sklearn.cluster import DBSCAN
 
-from .getPDB import readPDB, readPDB2Pd
+from deepaf.utils.get_PDB import readPDB, readPDB2Pd
 
 
 def calc_residue_dist(residue_one, residue_two) :
