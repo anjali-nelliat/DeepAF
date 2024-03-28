@@ -24,7 +24,7 @@ def main(args):
     np.random.seed(args.seed)
 
     # Load dataset
-    with open(args.dataset, 'r', encoding="utf-8") as f:
+    with open(args.dataset, 'r', encoding="utf-8-sig") as f:
         csv_dict = csv.DictReader(f)
         dataset = [row for row in csv_dict]
 
