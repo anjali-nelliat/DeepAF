@@ -11,8 +11,8 @@ from datetime import datetime
 import numpy as np
 import tensorflow as tf
 
-from utils.densenet_model import get_model
-from utils.dataset import gen, get_dataset_from_csv
+from deepaf.utils.densenet_model import get_model
+from deepaf.utils.dataset import gen, get_dataset_from_csv
 
 
 print(tf.test.gpu_device_name())
