@@ -14,9 +14,9 @@ from tqdm import tqdm
 import numpy as np
 import pandas as pd
 
-from utils.get_interface import cal_interface_worker
-from utils.distance_encoding import encoding_worker
-from utils.dataset import save_dataset_to_csv
+from deepaf.utils.get_interface import cal_interface_worker
+from deepaf.utils.distance_encoding import encoding_worker
+from deepaf.utils.dataset import save_dataset_to_csv
 
 
 def main(args):
