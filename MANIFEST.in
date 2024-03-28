@@ -1,1 +1,1 @@
-recursive-include molbert/utils/ *.py
+recursive-include deepaf/utils/ *.py
