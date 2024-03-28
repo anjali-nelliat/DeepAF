@@ -70,7 +70,6 @@ def main(args):
             packed_data.append([pdb_paths[i],
                                 interfaces[i],
                                 args.edge_length,
-                                method,
                                 True,
                                 args.interface_threshold,
                                 os.path.join(outpath, pname[i] + '.npy'),
