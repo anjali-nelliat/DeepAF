@@ -4,7 +4,7 @@ import os
 import csv
 import numpy as np
 
-from .data_augment import rotate3D, relocate
+from deepaf.utils.data_augment import rotate3D, relocate
 
 
 def generate(dataset, batch_size, augment=False):
