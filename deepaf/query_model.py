@@ -30,7 +30,7 @@ def main(args):
 
     print('---------------begin query---------------')
 
-    model = get_model(args.model, input_size)
+    model = get_model(input_size)
 
     print("Trained weights from", args.weights)
     model.load_weights(args.weights)
