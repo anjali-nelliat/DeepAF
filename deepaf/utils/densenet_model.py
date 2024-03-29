@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from deepaf.utils.densenet3d import DenseNet3DImageNet121, DenseNet3DPPI, DenseNet3D
+from deepaf.utils.densenet3D import DenseNet3DImageNet121, DenseNet3DPPI, DenseNet3D
 
 def get_model(inputsize):
     return DenseNet3D(
