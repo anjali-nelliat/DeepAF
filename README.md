@@ -1,11 +1,7 @@
 # DeepAF
-DeepAF is a Python package that improves the accuracy of high-throughput AlphaFold-Multimer screens using the 3D structural information learned by a  Dense Convolutional Network (DenseNet) to identify real protein complexes. 
+DeepAF is a Python package that predicts protein-protein interactions. DeepAF improves the accuracy of high-throughput AlphaFold-Multimer screens using the 3D structural information learned by a Dense Convolutional Neural Network (DenseNet) to identify real protein complexes. The high-confidence interactors are then clustered by potential functional groups/pathways using Knowledge Graph embeddings calculated from running the edge2vec algorithm on interactions from the Depmap, Bioplex, OpenCell and BioGRID databases.
 
-The pipeline consists of four major steps:
-1. Obtain predicted protein complexes using an optimized version of [AlphaPulldown](https://github.com/KosinskiLab/AlphaPulldown/tree/main).
-2. Calculate 3D representations of each protein complex using Euclidian distance-based encoding.
-3. Train the DenseNet3D model.
-4. Run the query dataset.
+![alt text](https://github.com/anjali-nelliat/DeepAF/blob/main/assets/DeepAF_workflow.png)
 
 ## Pre-installation
 Download Alphafold databases as decribed in the [AlphaFold documentation](https://github.com/google-deepmind/alphafold)
@@ -24,7 +20,7 @@ conda install -c bioconda hmmer
 python3 -m pip install -e git+https://github.com/anjali-nelliat/AlphaPulldown.git@main
 pip install jax==0.4.23 jaxlib==0.4.23+cuda11.cudnn86 -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
 
-python3 -m pip install git+https://github.com/anjali-nelliat/DeepAF.git@main
+python3 -m pip install -e git+https://github.com/anjali-nelliat/DeepAF.git@main
 
 ```
 
