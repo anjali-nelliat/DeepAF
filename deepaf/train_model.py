@@ -13,7 +13,7 @@ import tensorflow as tf
 from tensorflow import keras
 
 from deepaf.utils.densenet_model import get_model
-from deepaf.utils.dataset import gen, get_dataset_from_csv
+from deepaf.utils.dataset import generate, get_dataset_from_csv
 from deepaf.utils.training_plots import saveConfig, drawFig
 
 
@@ -70,7 +70,7 @@ def main(args):
                 metrics=[examine, tf.keras.metrics.AUC()])
 
 
-    history = model.fit_generator(generator=gen(train_set, args.batch, augment=args.augment),
+    history = model.fit_generator(generator=generate_train(train_set, args.batch, augment=args.augment),
                                 epochs=args.epoch,
                                 steps_per_epoch=math.ceil(len(train_set)/args.batch),
                                 validation_data=gen(test_set, args.batch, augment=False),
