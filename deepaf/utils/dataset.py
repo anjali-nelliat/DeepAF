@@ -7,7 +7,7 @@ import numpy as np
 from deepaf.utils.data_augment import rotate3D, relocate
 
 
-def generate(dataset, batch_size, augment=False):
+def generate_train(dataset, batch_size, augment=False):
     while 1:
         for i in range(0, len(dataset), batch_size):
             ds = dataset[i:i + batch_size]
@@ -26,7 +26,24 @@ def generate(dataset, batch_size, augment=False):
 
             x = np.array(x)
             y = np.array(y)
-            yield [x, y]
+            yield (x, y)
+
+def generate_query(dataset, batch_size, augment=False):
+    while 1:
+        for i in range(0, len(dataset), batch_size):
+            ds = dataset[i:i + batch_size]
+            x = []
+            for d in ds:
+                data = np.load(d[0])
+                if augment:
+                    data = rotate3D(data)
+                    data = relocate(data)
+
+                x.append(data)
+
+            x = np.array(x)
+            yield [x, )
+            
 
 
 def get_dataset_from_csv(csv_path, data_dir):
