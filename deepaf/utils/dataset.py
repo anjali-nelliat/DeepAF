@@ -42,7 +42,7 @@ def generate_query(dataset, batch_size, augment=False):
                 x.append(data)
 
             x = np.array(x)
-            yield [x, )
+            yield (x, )
             
 
 
