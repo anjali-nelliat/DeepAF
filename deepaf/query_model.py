@@ -12,7 +12,7 @@ import numpy as np
 import tensorflow as tf
 
 from deepaf.utils.densenet_model import get_model
-from deepaf.utils.dataset import gen, get_dataset_from_csv
+from deepaf.utils.dataset import generate, get_dataset_from_csv
 
 
 print(tf.test.gpu_device_name())
@@ -36,7 +36,7 @@ def main(args):
     model.load_weights(args.weights)
     # model.summary()
 
-    pred = model.predict_generator(generator=gen(query_data, args.batch, augment=False),
+    pred = model.predict_generator(generator=generate_query(query_data, args.batch, augment=False),
                                      steps=math.ceil(len(query_data) / args.batch),
                                       workers=1,
                                       verbose=1)
