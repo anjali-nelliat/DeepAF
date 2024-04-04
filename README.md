@@ -1,5 +1,5 @@
 # DeepAF
-DeepAF is a Python package that predicts protein-protein interactions. DeepAF improves the accuracy of high-throughput AlphaFold-Multimer screens using the 3D structural information learned by a Dense Convolutional Neural Network (DenseNet) to identify real protein complexes. 
+DeepAF is a Python package that predicts protein-protein interactions and identifies functional clusters. DeepAF improves the accuracy of high-throughput AlphaFold-Multimer screens using the 3D structural information learned by a Dense Convolutional Neural Network (DenseNet) to identify real protein complexes. 
 The high-confidence interactors are then clustered by potential functional groups/pathways using Knowledge Graph embeddings calculated from running the edge2vec algorithm on interactions from the Depmap, Bioplex, OpenCell and BioGRID databases.
 
 ![alt text](https://github.com/anjali-nelliat/DeepAF/blob/main/assets/DeepAF_workflow.png)
