@@ -118,32 +118,32 @@ The output is a numpy array file with (probability of non-interaction, probabili
 The input file is an interaction matrix with five columns Node 1, Node 2, Edge Type, Edge Weight, Edge ID. All column values are encoded as integers (except Edge Weight which is a floating point number).
 In our study, interacting gene/protein pairs from BioGRID, Bioplex and OpenCell, as well as genetic codependencies from Depmap were used to construct the input data.
 ```
-transition.py
---input <path to input txt file>
---output <path to output transition matrix>
---type_size <number of edge types>
---em_iteration <number of EM iterations for the transition matrix>
---e_step <E step in the EM algorithm: there are four metrics to calculate edge type similarity - 1:Wilcoxon 2:Entropy 3:Spearman correlation (default) 4:Pearson correlation
---walk-length <length of walk per source>
---num-walks <number of walks per source>
+python transition.py \
+--input <path to input txt file> \
+--output <path to output transition matrix> \
+--type_size <number of edge types> \
+--em_iteration <number of EM iterations for the transition matrix> \
+--e_step <E step in the EM algorithm: there are four metrics to calculate edge type similarity - 1:Wilcoxon 2:Entropy 3:Spearman correlation (default) 4:Pearson correlation \
+--walk-length <length of walk per source> \
+--num-walks <number of walks per source> \
 --weighted # add argument for weighted graph
 ```
-The output is a txt file with the transition matrix. Refer to the ```transition.py``` script for additional modifiable parameters. The subsequent code is to obtain the final embeddings from the transition matrix
+The output is a .txt file with the transition matrix. Refer to the ```transition.py``` script for additional modifiable parameters. The subsequent code is to obtain the final embeddings from the transition matrix
 
 ```
-edge2vec.py
---input <path to input txt file>
---output <path to output transition matrix>
---type_size <number of edge types>
---em_iteration <number of EM iterations for the transition matrix>
---e_step <E step in the EM algorithm: there are four metrics to calculate edge type similarity - 1:Wilcoxon 2:Entropy 3:Spearman correlation (default) 4:Pearson correlation
---dimensions <number of dimensions>
---walk-length <length of walk per source>
---num-walks <number of walks per source>
---p <return hyperparameter>
---q <in-out hyperparameter>
+python edge2vec.py \
+--input <path to input txt file> \
+--output <path to output transition matrix> \
+--type_size <number of edge types> \
+--em_iteration <number of EM iterations for the transition matrix> \
+--e_step <E step in the EM algorithm: there are four metrics to calculate edge type similarity - 1:Wilcoxon 2:Entropy 3:Spearman correlation (default) 4:Pearson correlation \
+--dimensions <number of dimensions> \
+--walk-length <length of walk per source> \
+--num-walks <number of walks per source> \
+--p <return hyperparameter> \
+--q <in-out hyperparameter> \
 ```
-The output is a txt file with the final embeddings for the knowledge graph. Refer to the ```edge2vec.py``` script for additional modifiable parameters.
+The output is a .txt file with the final embeddings for the knowledge graph. Refer to the ```edge2vec.py``` script for additional modifiable parameters.
 These embeddings are projected into 2D space using a PCA and the high-confidence interactors of our protein of interest (iPTM >0.6, probability of interaction > 0.6) are highlighted to identify clusters of interactors.
 
 This method was successful in identifying multiple novel protein chaperones and a highly conserved chaperone system when interfaces with data from [HSF1base](https://hsf1base.org/)
