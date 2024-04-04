@@ -7,25 +7,28 @@ from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
 
-import keras.backend as K
-from keras.utils.layer_utils import get_source_inputs
-from keras.layers import Activation
-from keras.layers import AveragePooling3D
-from keras.layers import BatchNormalization
-from keras.layers import Conv3D
-from keras.layers import Conv3DTranspose
-from keras.layers import Dense
-from keras.layers import Dropout
-from keras.layers import GlobalAveragePooling3D
-from keras.layers import GlobalMaxPooling3D
-from keras.layers import Input
-from keras.layers import MaxPooling3D
-from keras.layers import Reshape
-from keras.layers import UpSampling3D
-from keras.layers import concatenate
-from keras.models import Model
-from keras.regularizers import l2
+import tensorflow as tf
+import tensorflow.keras.backend as K
 
+from tensorflow.python.keras.utils.layer_utils import get_source_inputs
+from tensorflow.keras.models import Model
+from tensorflow.keras.regularizers import l2
+from tensorflow.keras.layers import (
+  Activation,
+  AveragePooling3D,
+  BatchNormalization,
+  Conv3D,
+  Conv3DTranspose,
+  Dense,
+  Dropout,
+  GlobalAveragePooling3D,
+  GlobalMaxPooling3D,
+  Input,
+  MaxPooling3D,
+  Reshape,
+  UpSampling3D,
+  concatenate
+)
 
 def DenseNet3D(input_shape=None,
                depth=40,
