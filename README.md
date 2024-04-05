@@ -144,8 +144,8 @@ python edge2vec.py \
 --q <in-out hyperparameter> \
 ```
 The output is a .txt file with the final embeddings for the knowledge graph. Refer to the ```edge2vec.py``` script for additional modifiable parameters.
-These embeddings are projected into 2D space using a PCA and the high-confidence interactors of our protein of interest (iPTM >0.6, probability of interaction > 0.6) are highlighted to identify clusters of interactors.
+Embeddings of the high-confidence interactors of our protein of interest (iPTM >0.6, probability of interaction > 0.6) are projected into 2D space using a PCA to identify clusters of interactors.
 
-This method was successful in identifying multiple novel protein chaperones and a highly conserved chaperone system when interfaces with data from [HSF1base](https://hsf1base.org/)
+This method was successful in identifying multiple novel protein chaperones and a highly conserved chaperone system when interfaced with data from [HSF1base](https://hsf1base.org/)
 
 
